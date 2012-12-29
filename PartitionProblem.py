@@ -6,7 +6,7 @@ left = []
 right = []
 balance = 0 #negative value if left sum is higher, positive value if right sum is higher and 0 if sums are equal
 
-def furthestVal(num):
+def farthestVal(num):
 	largest_delta = 0 
 	large_key = 0
 	for key in numbers:
@@ -17,23 +17,23 @@ def furthestVal(num):
 	return large_key
 
 
-for i in range(1000):
+for i in range(1000): #generates 100 numbers to partition
 	numbers.append(random.randrange(1,1000,1))
 
 for j in range(1000):
 	if(balance != 0):
 		if(balance < 0):
-			far_val = furthestVal(balance)
+			far_val = farthestVal(balance)
 			right.append(far_val)
 			numbers.remove(far_val)
 			balance += far_val
 		else:
-			far_val = furthestVal(balance)
+			far_val = farthestVal(balance)
 			left.append(far_val)
 			numbers.remove(far_val)
 			balance -= far_val
 	else:
-		far_val = furthestVal(balance)
+		far_val = farthestVal(balance)
 		left.append(far_val)
 		numbers.remove(far_val)
 		balance -= far_val
