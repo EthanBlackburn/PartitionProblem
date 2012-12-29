@@ -1,4 +1,4 @@
-PatitionProblem
+PartitionProblem
 ===============
 
 Solution to Partition Problem using the greedy algorithm and written in python
