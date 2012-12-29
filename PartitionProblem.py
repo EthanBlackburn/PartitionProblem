@@ -17,7 +17,7 @@ def farthestVal(num):
 	return large_key
 
 
-for i in range(1000): #generates 100 numbers to partition
+for i in range(1000): #generates 1000 numbers to partition
 	numbers.append(random.randrange(1,1000,1))
 
 for j in range(1000):
